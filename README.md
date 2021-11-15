@@ -1,7 +1,21 @@
+# Helm Chart for Apache NiFi(Customized to use HTTP)
+### About this repo
+- I modified a few files to make Nifi use HTTP. Because NiFi 1.5.0 has been updated to use HTTPS(Modified : values.yaml, template/statefulste.yaml)
+
+- If the LoadBalancer Service and port 8080 are available in your Kubernetes, you can use this code as it is.
+- Usage :
+```bash
+helm install my-nifi .
+```
+- In you Browser
+```
+http://<EXTERNAL-IP>:8080/nifi
+```
+- Belows are copied from https://github.com/cetic/helm-nifi
+
 # Helm Chart for Apache NiFi
 
 [![CircleCI](https://circleci.com/gh/cetic/helm-nifi.svg?style=svg)](https://circleci.com/gh/cetic/helm-nifi/tree/master) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![version](https://img.shields.io/github/tag/cetic/helm-nifi.svg?label=release) ![test](https://github.com/cetic/helm-nifi/actions/workflows/test.yml/badge.svg)
-
 
 ## Introduction
 
